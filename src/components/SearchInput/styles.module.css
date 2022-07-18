@@ -1,0 +1,10 @@
+.searchInputWrapper {
+  input {
+    @apply text-5xl w-full outline-none border-b-4 border-transparent
+      py-2;
+  }
+
+  input:focus {
+    @apply border-b-emerald-500;
+  }
+}

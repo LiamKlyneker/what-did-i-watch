@@ -3,7 +3,9 @@
     "baseUrl": ".",
     "paths": {
       "#atoms": ["src/atoms/index"],
-      "#components": ["src/components/index"]
+      "#components": ["src/components/index"],
+      "#hooks": ["src/hooks"],
+      "#types": ["src/types"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],

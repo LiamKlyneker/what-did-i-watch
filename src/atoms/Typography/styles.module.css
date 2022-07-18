@@ -1,3 +1,7 @@
 .p {
   @apply text-base;
 }
+
+.h3 {
+  @apply text-2xl font-semibold;
+}

@@ -1,0 +1,16 @@
+.movieTile {
+  @apply bg-white shadow-md;
+}
+
+.movieTilePoster {
+  @apply relative w-full bg-gray-900;
+  height: 400px;
+}
+
+.movieTileInfo {
+  @apply px-4 py-2;
+
+  p {
+    @apply uppercase;
+  }
+}
