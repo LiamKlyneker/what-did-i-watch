@@ -58,8 +58,11 @@ const PageContent = (props: MovieDetailPageProps) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async context => {
+  const baseUrl = process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "http://localhost:3000";
   const response = await fetch(
-    `${process.env.VERCEL_URL}/api/omdb?${new URLSearchParams({
+    `${baseUrl}/api/omdb?${new URLSearchParams({
       i: context.query.id,
     } as Record<string, string>)}`
   );
