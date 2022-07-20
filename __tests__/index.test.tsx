@@ -1,5 +1,5 @@
-import { fireEvent, render, screen } from "@testing-library/react";
-import HomePage from ".";
+import { render, screen } from "@testing-library/react";
+import HomePage from "../pages";
 
 jest.mock("next/router", () => ({
   useRouter() {
