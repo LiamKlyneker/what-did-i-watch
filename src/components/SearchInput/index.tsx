@@ -1,3 +1,4 @@
+import { Ref } from "react";
 import { debounce } from "lodash";
 import s from "./styles.module.css";
 
@@ -6,11 +7,12 @@ export interface SearchInputProps {
   name: string;
   onChange: (name: string, value: string) => void;
   placeholder: string;
-  value?: string;
+  forwardRef: Ref<HTMLInputElement>;
 }
 
 export default function SearchInput(props: SearchInputProps) {
-  const { name, placeholder, onChange, debounceOnChangeDelay, value } = props;
+  const { name, placeholder, onChange, debounceOnChangeDelay, forwardRef } =
+    props;
 
   const debounceOnChange = debounce((value: string) => {
     onChange(name, value);
@@ -33,6 +35,7 @@ export default function SearchInput(props: SearchInputProps) {
         placeholder={placeholder}
         onChange={handleOnChange}
         autoComplete="off"
+        ref={forwardRef}
       />
     </div>
   );

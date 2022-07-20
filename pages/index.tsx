@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -14,6 +14,7 @@ const Home: NextPage = () => {
   const router = useRouter();
   const { filters, setFilterValue, updatePage } = useFilters();
   const { performFetch, movies, isLoading, meta } = useFetchMovies();
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const handleOnClickMovie = (movie: Movie) => {
     router.push(
@@ -25,6 +26,10 @@ const Home: NextPage = () => {
       { shallow: true }
     );
   };
+
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, [inputRef]);
 
   useEffect(() => {
     filters.s && performFetch(filters);
@@ -44,6 +49,7 @@ const Home: NextPage = () => {
         placeholder="Which movie/serie you just watched?"
         onChange={(name, value) => setFilterValue(name, value)}
         debounceOnChangeDelay={500}
+        forwardRef={inputRef}
       />
 
       <TilesGrid>
