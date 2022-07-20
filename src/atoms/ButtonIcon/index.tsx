@@ -4,12 +4,12 @@ import s from "./styles.module.css";
 
 interface ButtonIconProps {
   icon: string;
-  theme: "dark" | "light";
+  theme?: "light" | "dark";
   onClick?: () => void;
 }
 
 const ButtonIcon = forwardRef((props: ButtonIconProps, forwardRef: any) => {
-  const { icon, theme, onClick } = props;
+  const { icon, theme = "light", onClick } = props;
 
   return (
     <button
