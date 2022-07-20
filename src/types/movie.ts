@@ -4,6 +4,7 @@ export interface Movie {
   Title: string;
   Type: string;
   Year: string;
+  Plot: string;
 }
 
 export interface MovieMeta {

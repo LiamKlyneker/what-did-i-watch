@@ -5,7 +5,8 @@
       "#atoms": ["src/atoms/index"],
       "#components": ["src/components/index"],
       "#hooks": ["src/hooks"],
-      "#types": ["src/types"]
+      "#types": ["src/types"],
+      "#layout": ["src/layout"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],

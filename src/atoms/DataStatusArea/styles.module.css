@@ -1,0 +1,3 @@
+.dataStatus {
+  @apply p-8 flex justify-center items-center;
+}

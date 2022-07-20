@@ -1,7 +1,26 @@
 .p {
-  @apply text-base;
+  @apply text-sm;
+}
+@screen md {
+  .p {
+    @apply text-base;
+  }
+}
+
+.h1 {
+  @apply text-2xl font-semibold mb-4;
+}
+@screen md {
+  .h1 {
+    @apply text-5xl;
+  }
 }
 
 .h3 {
-  @apply text-2xl font-semibold;
+  @apply text-lg font-semibold;
+}
+@screen md {
+  .h3 {
+    @apply text-2xl;
+  }
 }

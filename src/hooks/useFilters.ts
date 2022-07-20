@@ -16,7 +16,7 @@ export default function useFilters() {
       pathname: "/",
       query: {
         ...queryToSet,
-        ...(value && { [name]: value }),
+        ...(value && { [name]: value.trim() }),
       },
     });
   };
@@ -26,11 +26,11 @@ export default function useFilters() {
   useEffect(() => {
     setFilters({
       ...filters,
-      ...(router.query as unknown as Filters),
+      ...router.query,
       ...(router.query.s !== filters.s && { page: 1 }),
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [router.query]);
+  }, [router.query.s]);
 
   return { filters, setFilterValue, updatePage };
 }

@@ -1,0 +1,41 @@
+.closeButton {
+  @apply absolute top-0 right-0 m-2 z-50;
+}
+
+.overlay {
+  @apply fixed left-0 top-0 w-full h-full bg-black bg-opacity-70 z-40;
+  animation: overlayShowAnimation 0.3s ease-in-out;
+}
+
+.content {
+  @apply fixed top-12 left-0 right-0 bottom-0 bg-white
+    rounded-t-md z-40;
+  animation: contentShowAnimation 0.3s ease-in-out;
+  max-height: 100vh;
+  overflow-y: auto;
+
+  & > div {
+    @apply max-w-screen-xl mx-auto px-4 py-8;
+  }
+}
+
+@keyframes overlayShowAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contentShowAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

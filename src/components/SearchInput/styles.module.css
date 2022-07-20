@@ -1,10 +1,20 @@
 .searchInputWrapper {
+  @apply mb-8;
+
   input {
-    @apply text-5xl w-full outline-none border-b-4 border-transparent
-      py-2;
+    @apply text-xl w-full outline-none border-b-2 border-transparent
+      py-2 text-center;
   }
 
   input:focus {
     @apply border-b-emerald-500;
+  }
+}
+
+@screen md {
+  .searchInputWrapper {
+    input {
+      @apply text-5xl border-b-4 font-bold;
+    }
   }
 }

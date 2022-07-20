@@ -1,0 +1,19 @@
+.movieDetailTile {
+  @apply gap-6;
+}
+
+@screen md {
+  .movieDetailTile {
+    @apply flex;
+  }
+}
+
+.movieTilePoster {
+  @apply relative w-full bg-gray-900 shadow-lg mb-4;
+  height: 530px;
+  max-width: 400px;
+}
+
+.movieInfo {
+  max-width: 600px;
+}

@@ -22,9 +22,9 @@ export default function useFetchMovies() {
       const moviesToSet = json.Search || [];
       setMovies(filters.page === 1 ? moviesToSet : [...movies, ...moviesToSet]);
       setMeta({ totalResults: json.totalResults });
-      setIsLoading(false);
     } catch (error: any) {
       setError(error);
+    } finally {
       setIsLoading(false);
     }
   };

@@ -1,0 +1,13 @@
+.header {
+  @apply p-4 flex justify-center;
+}
+
+.main {
+  @apply max-w-screen-xl mx-auto p-4;
+}
+
+@screen md {
+  .main {
+    @apply px-8 py-4;
+  }
+}

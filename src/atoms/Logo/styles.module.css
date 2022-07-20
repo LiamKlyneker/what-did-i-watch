@@ -1,0 +1,9 @@
+.logo {
+  @apply text-4xl;
+}
+
+@screen md {
+  .logo {
+    @apply text-5xl;
+  }
+}

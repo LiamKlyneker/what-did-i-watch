@@ -1,0 +1,15 @@
+.tilesGrid {
+  @apply grid gap-6 grid-cols-2;
+}
+
+@screen sm {
+  .tilesGrid {
+    @apply grid-cols-3;
+  }
+}
+
+@screen lg {
+  .tilesGrid {
+    @apply grid-cols-4;
+  }
+}
